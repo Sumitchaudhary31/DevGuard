@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 @layer base {
   body {
-    @apply bg-primary text-white font-sans overflow-x-hidden;
+   @apply text-white font-sans overflow-x-hidden;
+background-color: var(--bg-primary);
     background-image:
       radial-gradient(
         circle at 15% 50%,
