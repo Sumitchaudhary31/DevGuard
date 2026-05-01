@@ -478,69 +478,6 @@ h4 {
   }
 }
 
-/* Login Page Specific */
-.login-container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  position: relative;
-}
-
-.login-split {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  background: rgba(10, 10, 26, 0.6);
-  backdrop-filter: blur(20px);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-
-.login-left {
-  flex: 1;
-  padding: 4rem;
-  background: radial-gradient(circle at 0% 0%, rgba(157, 78, 221, 0.15) 0%, transparent 50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.login-right {
-  flex: 1;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(5, 5, 15, 0.4);
-  position: relative;
-}
-
-.login-card {
-  width: 100%;
-  max-width: 420px;
-  padding: 2.5rem;
-  border-radius: 20px;
-  background: rgba(20, 20, 40, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.login-title {
-  font-size: 3rem;
-  line-height: 1.1;
-}
-
-.login-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 400px;
-}
 
 .abstract-graphic {
   position: relative;
@@ -724,10 +661,6 @@ h4 {
   padding: 0 1rem;
 }
 
-.social-login {
-  display: flex;
-  flex-direction: column;
-}
 
 .btn-social {
   background: rgba(255, 255, 255, 0.05);
@@ -745,50 +678,11 @@ h4 {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.login-footer {
-  position: absolute;
-  bottom: 2rem;
-  display: flex;
-  gap: 1rem;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
 
-.login-footer a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: var(--transition);
-}
 
-.login-footer a:hover {
-  color: var(--accent-blue);
-}
+
 
 .cursor-pointer {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
-  .login-split {
-    flex-direction: column;
-  }
-
-  .login-left {
-    padding: 3rem 2rem;
-    align-items: center;
-    text-align: center;
-  }
-
-  .login-right {
-    padding: 3rem 2rem;
-  }
-
-  .login-footer {
-    position: static;
-    margin-top: 2rem;
-  }
-
-  .login-title {
-    font-size: 2.2rem;
-  }
-}

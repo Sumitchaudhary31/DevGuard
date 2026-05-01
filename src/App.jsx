@@ -31,16 +31,38 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const features = [
-    { icon: <Activity />, title: "Change Tracking", desc: "Monitor every line of code modified across your entire branch in real-time." },
-    { icon: <Code />, title: "AI Code Review", desc: "Instantly receive AI-powered feedback on your code architecture, logic, and style." },
-    { icon: <ShieldCheck />, title: "Security Scanner", desc: "Detect vulnerabilities and zero-day exploits before they are ever committed." },
-    { icon: <Zap />, title: "Performance Analysis", desc: "Identify performance bottlenecks and memory leaks automatically." },
-    { icon: <Clock />, title: "Risk Timeline", desc: "Visualize the potential impact of your changes over the lifetime of the project." },
-    { icon: <Wrench />, title: "Auto Fix Suggestions", desc: "One-click application of AI-generated fixes for bugs and security flaws." },
-    { icon: <FileText />, title: "Smart Summary", desc: "Generate a TL;DR of your PRs for faster reviewer comprehension." },
-    { icon: <Lightbulb />, title: "Developer Insights", desc: "Learn and improve with personalized suggestions based on your coding habits." }
-  ];
+ const features = [
+  {
+    icon: <Activity />,
+    title: "Change Intelligence",
+    desc: "Track every code modification and instantly understand what changed and why it matters."
+  },
+  {
+    icon: <Zap />,
+    title: "Impact Visualization",
+    desc: "Visualize how each change affects performance, dependencies, and system behavior."
+  },
+  {
+    icon: <ShieldCheck />,
+    title: "Vulnerability Detection",
+    desc: "Identify security risks and unsafe patterns before they reach production."
+  },
+  {
+    icon: <Code />,
+    title: "Code Quality Analysis",
+    desc: "Detect complex, poorly written functions and maintain clean, scalable code."
+  },
+  {
+    icon: <Wrench />,
+    title: "AI Fix Engine",
+    desc: "Get precise, one-click fixes for bugs, performance issues, and bad code patterns."
+  },
+  {
+    icon: <Clock />,
+    title: "Command Tracking",
+    desc: "Monitor terminal commands and understand their real impact on your codebase."
+  }
+];
 
   return (
     <>
@@ -132,34 +154,38 @@ function App() {
         </section>
 
         {/* Unique Value Section */}
-        <section className="section">
-          <div className="text-center mb-8">
-            <h2 style={{ fontSize: '2.5rem' }}>Not just code review — <span className="gradient-text">Change Intelligence</span></h2>
-            <p style={{ color: 'var(--text-secondary)', marginTop: '1rem' }}>See why the best teams are migrating to DevGuard AI.</p>
-          </div>
+      <section className="section">
+  <div className="text-center mb-8">
+    <h2 style={{ fontSize: '2.5rem' }}>
+      Stop Guessing — Start <span className="gradient-text">Understanding</span>
+    </h2>
+    <p style={{ color: 'var(--text-secondary)', marginTop: '1rem' }}>
+      Most developers write code blindly. DevGuard shows the real impact behind every action.
+    </p>
+  </div>
 
-          <div className="comparison-grid">
-            <div className="glass-card compare-card compare-bad">
-              <h3>Traditional Tools</h3>
-              <ul className="compare-list">
-                <li><XCircle className="bad-icon" size={20} /> Slow, blocks CI/CD pipelines</li>
-                <li><XCircle className="bad-icon" size={20} /> False positives create alert fatigue</li>
-                <li><XCircle className="bad-icon" size={20} /> Tells you what's wrong, not how to fix it</li>
-                <li><XCircle className="bad-icon" size={20} /> Disconnected from your editor context</li>
-              </ul>
-            </div>
-            
-            <div className="glass-card compare-card compare-good">
-              <h3>DevGuard AI</h3>
-              <ul className="compare-list">
-                <li><CheckCircle className="good-icon" size={20} /> Real-time feedback as you type</li>
-                <li><CheckCircle className="good-icon" size={20} /> Context-aware AI reduces false positives</li>
-                <li><CheckCircle className="good-icon" size={20} /> Provides 1-click applyable code fixes</li>
-                <li><CheckCircle className="good-icon" size={20} /> Native VS Code extension integration</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+  <div className="comparison-grid">
+    <div className="glass-card compare-card compare-bad">
+      <h3>Without DevGuard</h3>
+      <ul className="compare-list">
+        <li><XCircle className="bad-icon" size={20} /> Run commands without knowing consequences</li>
+        <li><XCircle className="bad-icon" size={20} /> Bugs detected only after breaking things</li>
+        <li><XCircle className="bad-icon" size={20} /> No visibility into code impact</li>
+        <li><XCircle className="bad-icon" size={20} /> Hard to trace what caused issues</li>
+      </ul>
+    </div>
+    
+    <div className="glass-card compare-card compare-good">
+      <h3>With DevGuard</h3>
+      <ul className="compare-list">
+        <li><CheckCircle className="good-icon" size={20} /> Track every command and code change</li>
+        <li><CheckCircle className="good-icon" size={20} /> See impact before it becomes a problem</li>
+        <li><CheckCircle className="good-icon" size={20} /> Visualize dependencies and performance shifts</li>
+        <li><CheckCircle className="good-icon" size={20} /> Get instant fixes with full context</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
         {/* Footer */}
         <footer className="footer">
