@@ -1,9 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-white font-sans overflow-x-hidden;
+    background-image:
+      radial-gradient(
+        circle at 15% 50%,
+        rgba(157, 78, 221, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 85% 30%,
+        rgba(0, 210, 255, 0.15) 0%,
+        transparent 50%
+      );
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-bold leading-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent;
+  }
+}
 
 :root {
-
-
-  --bg-primary: #05050f;
+  --bg-primary: #0a0a1a;
   --bg-secondary: #0a0a1a;
   --text-primary: #ffffff;
   --text-secondary: #a0a0b0;
@@ -22,13 +55,21 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden;
   background-image:
-    radial-gradient(circle at 15% 50%, rgba(157, 78, 221, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 85% 30%, rgba(0, 210, 255, 0.15) 0%, transparent 50%);
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(157, 78, 221, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(0, 210, 255, 0.15) 0%,
+      transparent 50%
+    );
   background-attachment: fixed;
 }
 
@@ -75,14 +116,21 @@ h4 {
   left: -100%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
   transform: skewX(-25deg);
   transition: var(--transition);
 }
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 210, 255, 0.1), 0 5px 15px rgba(157, 78, 221, 0.1);
+  box-shadow:
+    0 15px 35px rgba(0, 210, 255, 0.1),
+    0 5px 15px rgba(157, 78, 221, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -186,8 +234,8 @@ h4 {
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
+  width: 82px;
+  height: 82px;
   border-radius: 10px;
 }
 
@@ -231,7 +279,11 @@ h4 {
   width: 50px;
   height: 50px;
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(0, 210, 255, 0.1), rgba(157, 78, 221, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 210, 255, 0.1),
+    rgba(157, 78, 221, 0.1)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,7 +313,11 @@ h4 {
   transform: translate(-50%, -50%);
   width: 120%;
   height: 120%;
-  background: radial-gradient(circle, rgba(157, 78, 221, 0.15) 0%, transparent 60%);
+  background: radial-gradient(
+    circle,
+    rgba(157, 78, 221, 0.15) 0%,
+    transparent 60%
+  );
   z-index: -1;
   filter: blur(50px);
 }
@@ -277,7 +333,9 @@ h4 {
 .dashboard-img-wrapper {
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
   transition: var(--transition);
   background: var(--bg-secondary);
   width: 100%;
@@ -292,7 +350,9 @@ h4 {
 
 .dashboard-img-wrapper:hover {
   transform: translateY(-5px);
-  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 30px 60px -12px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .main-img {
@@ -322,7 +382,7 @@ h4 {
 }
 
 .steps-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 40px;
   left: 5%;
@@ -393,7 +453,11 @@ h4 {
 
 .compare-good {
   border-top: 4px solid var(--accent-blue);
-  background: linear-gradient(to bottom right, rgba(0, 210, 255, 0.05), rgba(157, 78, 221, 0.05));
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 210, 255, 0.05),
+    rgba(157, 78, 221, 0.05)
+  );
 }
 
 .compare-list {
@@ -478,7 +542,6 @@ h4 {
   }
 }
 
-
 .abstract-graphic {
   position: relative;
   height: 200px;
@@ -559,7 +622,7 @@ h4 {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   transition: var(--transition);
 }
@@ -652,7 +715,7 @@ h4 {
 
 .divider::before,
 .divider::after {
-  content: '';
+  content: "";
   flex: 1;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -660,7 +723,6 @@ h4 {
 .divider span {
   padding: 0 1rem;
 }
-
 
 .btn-social {
   background: rgba(255, 255, 255, 0.05);
@@ -678,11 +740,6 @@ h4 {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-
-
-
-
 .cursor-pointer {
   cursor: pointer;
 }
-

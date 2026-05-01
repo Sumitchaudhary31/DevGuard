@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Shield, Code, ArrowRight, Activity, ShieldCheck, Zap, Clock, Wrench, FileText, Lightbulb, XCircle, CheckCircle } from 'lucide-react';
+import { useEffect } from 'react';
+import { Code, ArrowRight, Activity, ShieldCheck, Zap, Clock, Wrench, FileText, Lightbulb, XCircle, CheckCircle } from 'lucide-react';
 import './index.css';
 
 function App() {
@@ -74,10 +74,6 @@ function App() {
           <div className="logo-container">
             <img src="/logo.png" alt="DevGuard AI Logo" className="logo-icon" />
             <span>DevGuard <span className="gradient-text">AI</span></span>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href="#" className="btn btn-secondary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Log In</a>
-            <a href="#" className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Get Early Access</a>
           </div>
         </nav>
 
@@ -185,7 +181,7 @@ function App() {
       </ul>
     </div>
   </div>
-</section>
+</section>npm
 
         {/* Footer */}
         <footer className="footer">
