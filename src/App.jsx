@@ -85,12 +85,9 @@ function App() {
             detects risks, and suggests fixes in real-time.
           </p>
           <div className="hero-cta">
-            <a href="#" className="btn btn-primary">
+            <button type="button" onClick={() => window.open('https://marketplace.visualstudio.com/items?itemName=pragyeshKumarSeth.devguard-ai', '_blank')} className="btn btn-primary">
               Install Extension <ArrowRight size={20} />
-            </a>
-            <a href="#demo" className="btn btn-secondary">
-              View Demo
-            </a>
+            </button>
           </div>
 
           <div className="dashboard-showcase" id="demo">
@@ -196,9 +193,9 @@ function App() {
             </div>
             
             <div className="footer-links">
-              <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold' }}>
+              <button type="button" onClick={() => window.open('#', '_blank')} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', padding: 0 }}>
                 <Code size={20} /> GitHub
-              </a>
+              </button>
             </div>
           </div>
         </footer>
